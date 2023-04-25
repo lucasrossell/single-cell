@@ -7,5 +7,6 @@ export function suncycle() {
     amplitude * Math.sin(frequency * window.sunlight.x) + yOffset;
   if (window.sunlight.x > window.gridSize.x) {
     window.sunlight.x = 0;
+    window.sunlight.y = yOffset; // Set the Y position to the middle
   }
 }
