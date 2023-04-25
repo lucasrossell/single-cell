@@ -24,6 +24,10 @@ class Cell {
 
     const x = this.position.x + Math.floor(Math.random() * 3) - 1;
     const y = this.position.y + Math.floor(Math.random() * 3) - 1;
+    // make sure the new cell is not out of bounds
+    if (x < 0 || x >= window.gridSize.x || y < 0 || y >= window.gridSize.y) {
+      return;
+    }
     // Check if the cell is occupied
     if (
       window.cells.some(
